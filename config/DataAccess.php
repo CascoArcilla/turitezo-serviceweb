@@ -17,7 +17,10 @@ class DataAccess
 
         $this->conection = new mysqli($this->host, $this->username, $this->password, $this->dbname);
         if ($this->conection->connect_error) {
-            die('Error de Conexión (' . $this->conection->connect_errno . ') ' . $this->conection->connect_error);
+            error_log("Error al obtener las credenciales para la base de datos: " . $this->conection->connect_error);
+            http_response_code(500);
+            echo json_encode(array("error" => "Error al conectar con la base de datos."));
+            die();
         }
     }
 

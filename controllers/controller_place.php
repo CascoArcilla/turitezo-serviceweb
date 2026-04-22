@@ -62,7 +62,8 @@ class ControllerPlace
 
             return $resPlace;
         } catch (Exception $th) {
-            return ["message" => "Fallo en optener los datos " . $th->getMessage()];
+            error_log("Error al obtener la lista de lugares: " . $th->getMessage());
+            return ["message" => "Fallo en optener los datos"];
         }
     }
 
@@ -109,7 +110,8 @@ class ControllerPlace
             $acData = null;
             return $this->details->getRawDetails();
         } catch (Exception $th) {
-            return ["message" => "Fallo al optener los datos " . $th->getMessage()];
+            error_log("Error al obtener los detalles del lugar: " . $th->getMessage());
+            return ["message" => "Fallo al optener los datos "];
         }
     }
 }

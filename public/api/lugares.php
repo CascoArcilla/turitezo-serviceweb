@@ -5,7 +5,7 @@ $objConPlaces = new ControllerPlace();
 
 $resPlaces = $objConPlaces->getListPlaces();
 
-if (!isset($resPlaces['message'])) {
+if (isset($resPlaces['message'])) {
     echo json_encode($resPlaces);
     die();
 } else {
@@ -15,6 +15,6 @@ if (!isset($resPlaces['message'])) {
         array_push($rawPlaces, $objPlace);
     }
 
-    json_encode($rawPlaces);
+    echo json_encode($rawPlaces);
     die();
 }

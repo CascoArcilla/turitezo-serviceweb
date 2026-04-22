@@ -7,5 +7,7 @@ services:
         - path: ./
           target: /var/www/html
           action: sync
+    env_file:
+      - .env
     ports:
       - 9101:80

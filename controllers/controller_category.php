@@ -13,7 +13,7 @@ class ControllerCategoria
         $this->queyAll = "SELECT * FROM categoria;";
     }
 
-    public function getAllCategories() : array
+    public function getAllCategories(): array
     {
         $this->listCategorys = array();
         try {
@@ -32,6 +32,7 @@ class ControllerCategoria
             $acces = null;
             return $this->listCategorys;
         } catch (\Throwable $th) {
+            error_log("Error al obtener las categorias: " . $th->getMessage());
             return ["message" => "Error optener los datos"];
         }
     }

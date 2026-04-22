@@ -1,5 +1,5 @@
 <?php
-require_once "../../controllers/controller_category.php";
+require_once __DIR__ . "/../../controllers/controller_category.php";
 
 $objConCategory = new ControllerCategoria();
 

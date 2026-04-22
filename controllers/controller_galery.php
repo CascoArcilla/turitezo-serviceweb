@@ -33,6 +33,7 @@ class ControllerGaleria
             $acc = null;
             return $this->listImages;
         } catch (\Throwable $th) {
+            error_log("Error al obtener las imágenes de la galeria: " . $th->getMessage());
             return ["message" => "Error al optener los datos"];
         }
     }

@@ -30,6 +30,7 @@ class ControllerLocate
             $conAcc = null;
             return $arrLocate;
         } catch (\Throwable $th) {
+            error_log("Error al obtener la localizacion: " . $th->getMessage());
             return ["message" => "Error al optener informacion"];
         }
     }
