@@ -1,0 +1,11 @@
+services:
+  server:
+    build:
+      context: .
+    develop:
+      watch:
+        - path: ./
+          target: /var/www/html
+          action: sync
+    ports:
+      - 9101:80
