@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/../../headers/extra_headers.php";
 require_once "../../controllers/controller_place.php";
 
 $objConPlaces = new ControllerPlace();

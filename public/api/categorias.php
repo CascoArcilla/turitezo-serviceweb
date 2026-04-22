@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/../../headers/extra_headers.php";
 require_once __DIR__ . "/../../controllers/controller_category.php";
 
 $objConCategory = new ControllerCategoria();
@@ -11,7 +12,7 @@ if (isset($categories["message"])) {
 } else {
     $listOfCategorys = array();
 
-    foreach ($categories as $category) {
+    foreach ($categories as $category) {    
         array_push($listOfCategorys, $category->getAtributs());
     }
     header('Content-Type: application/json; charset=UTF-8');

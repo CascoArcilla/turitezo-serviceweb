@@ -1,0 +1,8 @@
+# PHP: use LF (Unix) line endings
+*.php text=auto eol=lf
+
+# CSS: use LF (Unix) line endings
+*.css text=auto eol=lf
+
+# Images: treat as binary files to prevent CRLF conversion
+*.jpg binary

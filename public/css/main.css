@@ -66,10 +66,14 @@ img {
     display: inline-block;
     margin: 0 0.5rem;
 
-    /* animation: pulse; */
-    animation: shakeY;
-    /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 10s;
-    /* don't forget to set a duration! */
+    animation: boing;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+@keyframes boing {
+    0%   { transform: translateY(0) }
+    33%  { transform: translateY(-50px) }
+    67%  { transform: translateY(-25px) }
+    100% { transform: translateY(0) }
 }

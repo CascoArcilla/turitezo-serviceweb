@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . "/../../headers/extra_headers.php";
+
 $noId = ["message" => "Error en la espcificacion del lugar"];
 
 if (!isset($_GET["id_lugar"])) {
